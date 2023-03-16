@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contenedor{
+    height: 50%;
+    width: 50%;
+    border: 1px solid ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    height: 100%;
+    width: 100%;
+}
+.nombre{
+    height: 20%;
+}
+.apellido{
+    height: 20%;
+}
+.fecha{
+    height: 20%;
+}
+.cedula{
+    height: 20%;
+}
+.boton{
+    height: 20%;
+}
