@@ -53,6 +53,11 @@
 // console.log(infoSergio)
 // console.log(IMCdaniela)
 // console.log(infodaniela)
+let fechaA=[]
+fechaA[0]=new Date().getFullYear()
+fechaA[1]= new Date().getMonth()+1
+fechaA[2]=new Date().getDate()
+
 
 class Persona{
     cedula
@@ -73,21 +78,57 @@ class Persona{
         let nombreC=this.nombre+' '+this.apellido
         return nombreC
     }
-    // cumpleaños(){
-    //     if(fechaN==)
-    // }
+    cumpleaños(){
+        if(mes==fechaA[1] && dia==fechaA[2]){
+            return 'si'
+        }else{
+            return 'no'
+        }
+    } 
+
 }
 let fecha_hoy=new Date().getFullYear()
-
 let guardar=document.getElementById('guardar')
+let nombreC=document.querySelector('.nombreC')
+let cumple=document.querySelector('.cumple')
+let buscar=document.getElementById('buscar')
 let array=[]
 let cont=0
+let nom=[]
+let feliz=[]
+let mes=null
+let dia=null
+let validaCedula=[]
+let datos=[]
+let persona=null
+
 guardar.addEventListener('click',(event)=>{
     event.preventDefault()
     let fechas=fecha.value.split('-')
-    
-    const persona=new Persona(cedula.value,nombre.value,apellido.value,fecha.value,parseInt(fecha_hoy-fechas[0]))
-    console.log(persona.nombreCompleto())
+     mes=fechas[1]
+     dia=fechas[2]
+    persona=new Persona(cedula.value,nombre.value,apellido.value,fecha.value,parseInt(fecha_hoy-fechas[0]))
+    nom.push(persona.nombreCompleto())
     array.push(persona)
     console.log(array)
+    feliz.push(persona.cumpleaños())
+    validaCedula.push(persona.cedula)
+ 
+
+    let div3=document.createElement('div')
+    let div2=document.createElement('div')
+    div2.textContent=persona.nombreCompleto()
+    div3.textContent=persona.cumpleaños()
+
+    nombreC.append(div2)
+    cumple.append(div3)
+})
+buscar.addEventListener('click',()=>{
+
+        if(validaCedula.find(cedu=>cedu==numeroCedula.value)){
+            localStorage.setItem('misdatos',JSON.stringify(persona))
+
+        }else{
+            console.log('noo')
+        }
 })

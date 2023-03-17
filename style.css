@@ -10,8 +10,10 @@ html{
 body{
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 
 }
 .contenedor{
@@ -40,4 +42,50 @@ form{
 }
 .boton{
     height: 20%;
+}
+
+.conten2{
+    height: 30%;
+    width: 50%;
+    border: solid 1px;
+    display: flex;
+    
+}
+.nombreC{
+    width: 50%;
+    height: 100%;
+    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.cumple{
+    width: 50%;
+    height: 100%;
+    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+h2{
+    height: 20%;
+    border: solid 1px;
+    width: 100%;
+}
+.busqueda{
+    height: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.busqueda input{
+    width: 50%;
+    height: 35%;
+    font-size: 20px;
+}
+.busqueda button{
+    height: 35%;
+    width: 5%;
 }
