@@ -99,7 +99,7 @@ let feliz=[]
 let mes=null
 let dia=null
 let validaCedula=[]
-let datos=[]
+let datos=[[],[]]
 let persona=null
 
 guardar.addEventListener('click',(event)=>{
@@ -119,14 +119,15 @@ guardar.addEventListener('click',(event)=>{
     let div2=document.createElement('div')
     div2.textContent=persona.nombreCompleto()
     div3.textContent=persona.cumpleaños()
-
+    datos[0]=nom
+    datos[1]=feliz 
     nombreC.append(div2)
     cumple.append(div3)
 })
 buscar.addEventListener('click',()=>{
 
         if(validaCedula.find(cedu=>cedu==numeroCedula.value)){
-            localStorage.setItem('misdatos',JSON.stringify(persona))
+            localStorage.setItem('misdatos',JSON.stringify(datos))
 
         }else{
             console.log('noo')
