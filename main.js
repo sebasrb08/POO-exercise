@@ -129,11 +129,10 @@ guardar.addEventListener('click',(event)=>{
 buscar.addEventListener('click',()=>{
 
         if(validaCedula.find(cedu=>cedu==numeroCedula.value)){
-            indice=validaCedula.findIndex
-            (cedu=>cedu==numeroCedula.value)
-            console.log(indice)
+            indice=validaCedula.findIndex(cedu=>cedu==numeroCedula.value)
             localStorage.setItem('misdatos',JSON.stringify(datos))
-            
+            localStorage.setItem('indice',JSON.stringify(indice))
+            location.href='./index2.html'
 
         }else{
             console.log('noo')

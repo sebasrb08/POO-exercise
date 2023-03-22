@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-image: url(./imagenes/candles-g70b8760c2_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contenedor{
+    height: 50%;
+    width: 50%;
+    background-color: rgba(253, 200, 200, 0.925);
+}
+.nombre{
+    height: 40%;
+    display: flex;
+    justify-content: end;
+    font-size:70px;
+    margin-top: 50px;
+}
+.felizCumple{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+.felizCumple div{
+    border: solid 1px;
+}
