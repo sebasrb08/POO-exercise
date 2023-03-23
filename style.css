@@ -125,5 +125,9 @@ h2{
 }
 .busqueda button{
     height: 35%;
-    width: 5%;
+    width: 10%;
+    border: none;
+    background-color: rgb(87, 87, 230);
+    color: white;
+    border-radius: 10px;
 }
