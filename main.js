@@ -99,7 +99,7 @@ let feliz=[]
 let mes=null
 let dia=null
 let validaCedula=[]
-let datos={}
+let datos=JSON.parse(localStorage.getItem('misdatos')) || {}
 let persona=null
 let indice=null
 let fechas2=[]
@@ -111,18 +111,17 @@ guardar.addEventListener('click',(event)=>{
     persona=new Persona(cedula.value,nombre.value,apellido.value,fecha.value,parseInt(fecha_hoy-fechas[0]))
     nom.push(persona.nombreCompleto())
     array.push(persona)
-
+    console.log(array)
     feliz.push(persona.cumpleaños())
     validaCedula.push(persona.cedula)
  
     fechas2.push(persona.fechaN)
+    datos={nombres:nom,felizC:feliz,fecha:fechas2}
 
     let div3=document.createElement('div')
     let div2=document.createElement('div')
     div2.textContent=persona.nombreCompleto()
     div3.textContent=persona.cumpleaños()
-    datos={nombres:nom,felizC:feliz,fecha:fechas2}
-    console.log(datos)
     nombreC.append(div2)
     cumple.append(div3)
 })
