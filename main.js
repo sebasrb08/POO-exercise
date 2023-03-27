@@ -93,7 +93,6 @@ let nombreC=document.querySelector('.nombreC')
 let cumple=document.querySelector('.cumple')
 let buscar=document.getElementById('buscar')
 let array=[]
-let cont=0
 let nom=[]
 let feliz=[]
 let mes=null
